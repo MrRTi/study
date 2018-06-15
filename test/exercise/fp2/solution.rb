@@ -5,7 +5,7 @@ module Exercise
       # Использовать свои написанные функции для реализации следующих - можно.
 
       # Написать свою функцию my_each
-      def my_each(*)
+      def my_each
         for i in 0..(length - 1)
           yield(self[i])
         end
@@ -13,7 +13,7 @@ module Exercise
       end
 
       # Написать свою функцию my_map
-      def my_map(*)
+      def my_map
         answer = self.class.new
         for i in 0..(length - 1)
           answer << yield(self[i])
@@ -31,7 +31,7 @@ module Exercise
       end
 
       # Написать свою функцию my_reduce
-      def my_reduce(memo = 0, *)
+      def my_reduce(memo = 0)
         memo = 1 if memo == 0 && yield(memo, rand(1..100)) == 0
         for i in 0..(length - 1)
           memo = yield(memo, self[i])

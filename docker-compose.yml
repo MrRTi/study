@@ -12,6 +12,6 @@ ruby:
     - bundle_cache
 
 bundle_cache:
-  image: busybox
+  image: study_ruby
   volumes:
     - /bundle_cache
